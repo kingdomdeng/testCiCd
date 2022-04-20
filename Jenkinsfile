@@ -16,5 +16,11 @@ tar -czvf testCICD.tar dist'''
       }
     }
 
+    stage('123') {
+      steps {
+        archiveArtifacts(artifacts: 'testCICD.tar', caseSensitive: true)
+      }
+    }
+
   }
 }
