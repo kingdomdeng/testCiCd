@@ -10,7 +10,7 @@ npm install
 
 npm run build
 
-tar -czvf testCICD.tar dist'''
+tar -czvf testCICD.tar.gz dist'''
         }
 
       }
@@ -18,7 +18,7 @@ tar -czvf testCICD.tar dist'''
 
     stage('123') {
       steps {
-        archiveArtifacts(artifacts: 'testCICD', caseSensitive: true)
+        archiveArtifacts(artifacts: 'testCICD.tar.gz', caseSensitive: true)
       }
     }
 
